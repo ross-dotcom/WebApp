@@ -1,8 +1,36 @@
-<form method="post">
-    {% csrf_token %}
-    
-    {{form.as_p}}
-    
-    <input type="submit" value="Login">
-    
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="To-Do Web Application">
+        <meta name="author" content="Wesley Ross">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <title>To-Do Web Application</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .login_box {
+            width: 25%;
+            border: 3px solid black;
+            padding: 25px;
+            margin: auto;
+        }
+    </style>
+    <body>
+        <h1>To-Do Web Application</h1>
+        <br>
+        <div class="login_box">
+            <form method="post">
+                {% csrf_token %}
+                
+                {{form.as_p}}
+                
+                <input type="submit" value="Login">
+                
+            </form>
+        </div>
+    </body>
+</html>
