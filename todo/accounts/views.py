@@ -19,3 +19,6 @@ def sign_up(request):
             return render(request, 'accounts/index.html')
     context['form']=form
     return render(request, 'registration/sign_up.html', context)
+
+def custom(request):
+    return render(request, 'accounts/custom.html')
